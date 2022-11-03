@@ -21,36 +21,20 @@ Você pode baixar a ultima através [desse link](https://developer.android.com/s
 
 ## 🔖 Variáveis de ambiente
 
-### No Linux ou Mac
-
-Configure as seguintes váriávies de ambiente no **bash_profile** ou **zshrc** do seu Linux ou Mac:
-
-```bash
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export ANDROID_HOME=~/Library/Android/sdk
-
-PATH=$PATH:$ANDROID_HOME/platform-tools
-PATH=$PATH:$ANDROID_HOME/tools
-PATH=$PATH:$ANDROID_HOME/tools/bin
-PATH=$PATH:$ANDROID_HOME/tools/lib
-PATH=$PATH:$JAVA_HOME/bin
-```
-
-Para ZSH, execute o comando:
-
-```bash
-source ~/.zshrc
-```
-
-Para Bash, execute o comando:
-
-```bash
-source ~/.bashrc
-```
-
 ### No Windows
 
-[![Audi R8](.github/windows.png)](https://youtu.be/ZsOq4xoTid0 "Variáveis de ambiente no Windows")
+Configure as seguintes váriávies de ambiente 
+
+- <b>JAVA_HOME</b>: C:\Program Files (x86)\Java\jdkX.X.X_XXX\
+- <b>PATH</b>: %JAVA_HOME%\bin
+
+```
+ - <b>ANDROID_HOME</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\
+ - <b>PATH</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\platform-tools\
+ - <b>PATH</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\tools\
+ - <b>PATH</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\tools\bin\
+ - <b>PATH</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\tools\lib\
+```
 
 
 ## 📱Appium 
@@ -73,6 +57,12 @@ appium-doctor --android
 ## 📱Appium Desktop
 
 Instale o Appium Desktop Latest release (não faça download do Pre-release)
+
+O método de instalação recomendado é usar
+
+    pip install --upgrade robotframework-appiumlibrary
+
+
 
 
 ## 💻 Executar
