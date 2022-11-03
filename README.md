@@ -1,69 +1,86 @@
-# mobile-automation-test
+# 📱 mobile-automation-test
 Praticando automação de teste mobile android com Appium e Robot Framework
 
-### Instalação e configuração do Appium com Robot Framework
+## 👨‍💻 Tecnologias
 
-## Instale a versão LTS do NodeJs
-https://nodejs.org/en/
+Você vai precisar das seguintes ferramentas e tecnologias:
 
-## Instale o Servidor do Appium
+- [Python](https://www.python.org/downloads/)
+- [Node.js](https://nodejs.org/en/)
+- [Java JDK8](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
+- [Android Studio](https://developer.android.com/studio/index.html?hl=pt-br)
+- [Appium](http://appium.io/downloads.html)
+- [Robot Framework](https://robotframework.org/)
 
-<b>NOTA:</b> Abra o PowerShell como Administrador
+## 💻 Ferramentas
 
-	npm install appium -g
+Você pode baixar e instalar o JDK 8 através [desse link](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html).
 
-## Instale o Appium-Doctor
-	npm install appium-doctor -g
+Android Studio é a IDE oficial para desenvolvimento e testes de aplicativos para Android
+Você pode baixar a ultima através [desse link](https://developer.android.com/studio/index.html?hl=pt-br)
 
-## Dependências locais para configuração do ambiente
+## 🔖 Variáveis de ambiente
 
-### Java JDK 8
-Faça o download e instalação
-	https://www.oracle.com/java/technologies/downloads/#java8-windows
+### No Linux ou Mac
 
-#### Configure as variáveis do sistema:
+Configure as seguintes váriávies de ambiente no **bash_profile** ou **zshrc** do seu Linux ou Mac:
 
-- <b>JAVA_HOME</b>: C:\Program Files (x86)\Java\jdkX.X.X_XXX\
-- <b>PATH</b>: %JAVA_HOME%\bin
+```bash
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export ANDROID_HOME=~/Library/Android/sdk
 
-### Android Studio
-<p>   
-    <img src=https://img.shields.io/badge/-AndroidStudio%20-%23525252.svg?style=flat&logo=android-studio&>     
-  </p> 
+PATH=$PATH:$ANDROID_HOME/platform-tools
+PATH=$PATH:$ANDROID_HOME/tools
+PATH=$PATH:$ANDROID_HOME/tools/bin
+PATH=$PATH:$ANDROID_HOME/tools/lib
+PATH=$PATH:$JAVA_HOME/bin
+```
 
-Faça download e instale
+Para ZSH, execute o comando:
 
-[Clique aqui para o download do Android Studio](https://developer.android.com/studio?hl=pt&gclid=Cj0KCQjwsrWZBhC4ARIsAGGUJurRKSxt-NBHqwCdhhUbUZCqeH6qRINA8nHFWwnVokq_cc0oWr2e_VEaAvj0EALw_wcB&gclsrc=aw.ds)
+```bash
+source ~/.zshrc
+```
 
--<b>ATENÇÃO:</b> Marque a opção "Android Device Manager"
+Para Bash, execute o comando:
 
-#### Configure as variáveis do sistema:
+```bash
+source ~/.bashrc
+```
 
- - <b>ANDROID_HOME</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\
- - <b>PATH</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\platform-tools\
- - <b>PATH</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\tools\
- - <b>PATH</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\tools\bin\
- - <b>PATH</b>: C:\Users\SEU-USUARIO\AppData\Local\Android\Sdk\tools\lib\
+### No Windows
 
-## Appium para Desktop 
-<p>    
-    <img src=https://img.shields.io/badge/-Appium%20-%23525252.svg?style=flat&logo=selenium&logoColor=purple&>      
-  </p> 
+[![Audi R8](.github/windows.png)](https://youtu.be/ZsOq4xoTid0 "Variáveis de ambiente no Windows")
 
-Faça download e instale
-	https://appium.io/
 
-Faça download e instale 
-	https://github.com/appium/appium-inspector
+## 📱Appium 
 
- 
-## Appium para Robot Framework
+- Com o Node.js instalado, execute:
 
-[Link do Repositório da Library Appium para Robot](https://github.com/serhatbolsu/robotframework-appiumlibrary)
+  | Se estiver no Windows, execute no Prompt como Administrador
 
-O método de instalação recomendado é usar [pip](http://pip-installer.org/) :
+```bash
+npm install -g appium
+npm install -g appium-doctor
+```
 
-	pip install --upgrade robotframework-appiumlibrary
+- Em seguida, execute:
 
-## 👨🏻‍💻 Execução dos testes
-	robot -d ./logs tests/
+```bash
+appium-doctor --android
+```
+
+## 📱Appium Desktop
+
+Instale o Appium Desktop Latest release (não faça download do Pre-release)
+
+
+## 💻 Executar
+
+- Abra o Appium Desktop e clique em Start Server;
+- Acesse a pasta do projeto;
+- Instale o Robot e a Lib do Appium conforme descrito na [doc](https://robotframework.org/);
+- Execute o comando: `robot -d ./logs tests'`;
+
+
+---
